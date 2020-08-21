@@ -1,0 +1,14 @@
+.Content {
+    margin-top: 72px;
+}
+
+.logo {
+    color: #ed3237;
+
+    font-size: 30px;
+    padding: 7px;
+
+    font-size: bold;
+    font-weight: bold;
+    margin-left: 5rem;
+}
