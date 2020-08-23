@@ -53,7 +53,7 @@ class HomePage extends Component {
                     <h4 className="main-heading">
                       Want to Grow Your Business?
                     </h4>
-                    <h1 className="sub-heading">Register with BaaBae</h1>
+                    <h1 className="sub-heading">Register with baabae</h1>
                     <p className="sub-body">
                       If you want to give your customers great service, you need
                       to be online and you’ve got to be a Baabae partner. Take
