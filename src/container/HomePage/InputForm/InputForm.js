@@ -1,100 +1,114 @@
 import React from "react";
-import { Formik } from "formik";
-import { Col, Row, Button, Form } from "react-bootstrap";
-import * as yup from "yup";
+import { Formik, ErrorMessage, Field, Form } from "formik";
+import { Col, Row, Button, label, FormGroup } from "react-bootstrap";
+import * as Yup from "yup";
 
-const schema = yup.object({
-  firstName: yup.string().required(),
-  lastName: yup.string().required(),
-  email: yup.string().email().required(),
-  gender: yup.string().required(),
-  city: yup.string().required(),
-  state: yup.string().required(),
-  phoneNumber: yup.string().required(),
-  adhaarNumber: yup.string().validate(),
-  address: yup.string().required(),
-  dob: yup.date().required(),
+const schema = Yup.object().shape({
+  firstName: Yup.string().required("First Name is required"),
+  lastName: Yup.string().required("Last name is required"),
+  email: Yup.string().email("Email is invalid").required("Email is required"),
+  gender: Yup.string().required("Please select gender"),
+  city: Yup.string().required("City is required"),
+  state: Yup.string().required("State is required"),
+  phoneNumber: Yup.string()
+    .matches(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/, {
+      message: "Invalid Phone Number",
+    })
+    .required("PhoneNumber is required"),
+  adhaarNumber: Yup.string()
+    .matches(/^\D?(\d{16})$/, {
+      message: "Invalid Adhaar  Number",
+    })
+    .required("AdhaarNumber is required"),
+  address: Yup.string().required("Adress is required"),
 });
 
-function InputForm() {
+const InputForm = () => {
   return (
     <Formik
-      validationSchema={schema}
-      onSubmit={console.log("aashish")}
       initialValues={{
         firstName: "",
         lastName: "",
         email: "",
-        gender: "",
+
         city: "",
         state: "",
         phoneNumber: "",
         adhaarNumber: "",
         address: "",
-        dob: "",
       }}
-    >
-      {({
-        handleSubmit,
-        handleChange,
-        handleBlur,
-        values,
-        touched,
-        isValid,
-        errors,
-      }) => (
+      validationSchema={schema}
+      onSubmit={(fields) => {
+        alert("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
+      }}
+      render={({ errors, status, touched }) => (
         <Form>
-          <Form.Group>
+          <FormGroup>
             <Row className="justify-content-md-left">
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control placeholder="Enter First name" />
-                </div>
-              </Col>
-              <Col md="6">
-                <div className="input-wrapper">
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control placeholder="Enter Last name" />
-                </div>
-              </Col>
-              <Col md="6">
-                <div className="input-wrapper">
-                  <Form.Label>Email Address</Form.Label>
-                  <Form.Control
-                    placeholder="Enter Email address"
-                    type="email"
+                  <label>First Name</label>
+                  <Field
+                    placeholder="Enter First name"
+                    type="text"
+                    name="firstName"
+                    className={
+                      "form-control" +
+                      (errors.firstName && touched.firstName
+                        ? " is-invalid"
+                        : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="firstName"
+                    component="div"
+                    className="invalid-feedback"
                   />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>Gender</Form.Label>
-                  <div>
-                    <Form.Check
-                      inline
-                      label="Male"
-                      type="radio"
-                      id="male"
-                      name="radios"
-                    />
-                    <Form.Check
-                      inline
-                      label="Female"
-                      type="radio"
-                      name="radios"
-                      id="female"
-                    />
-                  </div>
+                  <label>Last Name</label>
+                  <Field
+                    placeholder="Enter Last name"
+                    type="text"
+                    name="lastName"
+                    className={
+                      "form-control" +
+                      (errors.lastName && touched.lastName ? " is-invalid" : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="lastName"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>State</Form.Label>
-                  <Form.Control as="select" custom>
-                    <option value="" disabled>
-                      Select your State
-                    </option>
+                  <label>Email Address</label>
+                  <Field
+                    placeholder="Enter Email address"
+                    type="email"
+                    name="email"
+                    className={
+                      "form-control" +
+                      (errors.email && touched.email ? " is-invalid" : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="invalid-feedback"
+                  />
+                </div>
+              </Col>
+
+              <Col md="6">
+                <div className="input-wrapper">
+                  <label>State</label>
+                  <Field as="select" name="state">
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                     <option value="Assam">Assam</option>
@@ -124,46 +138,116 @@ function InputForm() {
                     <option value="Uttar Pradesh">Uttar Pradesh</option>
                     <option value="Uttarakhand">Uttarakhand</option>
                     <option value="West Bengal">West Bengal</option>
-                  </Form.Control>
+                  </Field>
+                  <ErrorMessage
+                    name="state"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>City</Form.Label>
-                  <Form.Control placeholder="Enter City Name" type="text" />
+                  <label>City</label>
+                  <Field
+                    placeholder="Enter City Name"
+                    type="text"
+                    name="city"
+                    className={
+                      "form-control" +
+                      (errors.city && touched.city ? " is-invalid" : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="city"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>Phone Number</Form.Label>
-                  <Form.Control placeholder="Enter Phone Number" type="text" />
+                  <label>Phone Number</label>
+                  <Field
+                    placeholder="Enter Phone Number"
+                    type="text"
+                    name="phoneNumber"
+                    className={
+                      "form-control" +
+                      (errors.phoneNumber && touched.phoneNumber
+                        ? " is-invalid"
+                        : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="phoneNumber"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>Adhaar Number</Form.Label>
-                  <Form.Control placeholder="Enter Adhaar Number" type="text" />
+                  <label>Adhaar Number</label>
+                  <Field
+                    placeholder="Enter Adhaar Number"
+                    type="text"
+                    name="adhaarNumber"
+                    className={
+                      "form-control" +
+                      (errors.adhaarNumber && touched.adhaarNumber
+                        ? " is-invalid"
+                        : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="adhaarNumber"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
               <Col md="6">
                 <div className="input-wrapper">
-                  <Form.Label>Address</Form.Label>
-                  <Form.Control placeholder="Enter Address" type="text" />
+                  <label>Address</label>
+                  <Field
+                    placeholder="Enter Address"
+                    type="text"
+                    name="address"
+                    className={
+                      "form-control" +
+                      (errors.address && touched.address ? " is-invalid" : "")
+                    }
+                  />
+                  <ErrorMessage
+                    name="address"
+                    component="div"
+                    className="invalid-feedback"
+                  />
                 </div>
               </Col>
-              <Col md="6">
-                <div className="input-wrapper">
-                  <Form.Label>Date of birth</Form.Label>
-                  <Form.Control placeholder="Date of birth" type="date" />
+              <Col md="12">
+                <div role="group" aria-labelledby="checkbox-group">
+                  <label>
+                    <Field type="checkbox" name="agreement" value="true" />
+                    Do you accept our term and conditions?
+                  </label>
+                  <label>
+                    <Field type="checkbox" name="newsletter" value="true" />
+                    Do you want to receive newsletters and regular notifications
+                    on your email and phone number?
+                  </label>
                 </div>
               </Col>
             </Row>
-            <Button type="submit">I am ready to become Baabae Seller</Button>
-          </Form.Group>
+            <Button type="submit" style={{ background: "#fe534c" }}>
+              I am ready to become Baabae Seller
+            </Button>
+          </FormGroup>
         </Form>
       )}
-    </Formik>
+    />
   );
-}
+};
 
 export default InputForm;
