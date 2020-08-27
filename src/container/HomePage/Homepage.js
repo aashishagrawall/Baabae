@@ -17,8 +17,8 @@ class HomePage extends Component {
     return (
       <Fragment>
         <section className="main-section">
-          <div className="overlay-div-circle"></div>
-          <div className="mobile-screen">
+          <div className="overlay-div-circle d-none d-lg-block"></div>
+          <div className="mobile-screen  d-none d-lg-block">
             <img src="/mobileWithLogo.png"></img>
           </div>
 
@@ -26,18 +26,18 @@ class HomePage extends Component {
             <Carousel.Item className="landing-corousel-item">
               <img src="/banner1.jpg" className="background-image"></img>
               <Row className="justify-content-md-left">
-                <Col md={{ span: 5, offset: 1 }}>
+                <Col xs="12" md={{ span: 5, offset: 1 }}>
                   <div className="main-content">
-                    <h4 className="main-heading">
+                    <div className="main-heading">
                       For the Quickest Doorstep Delivery,
-                    </h4>
-                    <h1 className="sub-heading">Order Now</h1>
-                    <p className="sub-body">
+                    </div>
+                    <div className="sub-heading">Order Now</div>
+                    <div className="sub-body">
                       Why wait for hours for groceries when you can have them
                       delivered in a matter of minutes! From rice and flour to a
                       packet of instant noodles or even a bottle of shampoo, get
                       everything you need right here.
-                    </p>
+                    </div>
                     <a className="btn btn-google" href="#" title="Google Play">
                       Google Play
                     </a>
@@ -50,16 +50,16 @@ class HomePage extends Component {
               <Row className="justify-content-md-left">
                 <Col md={{ span: 6, offset: 1 }}>
                   <div className="main-content">
-                    <h4 className="main-heading">
+                    <div className="main-heading">
                       Want to Grow Your Business?
-                    </h4>
-                    <h1 className="sub-heading">Register with baabae</h1>
-                    <p className="sub-body">
+                    </div>
+                    <div className="sub-heading">Register with baabae</div>
+                    <div className="sub-body">
                       If you want to give your customers great service, you need
                       to be online and you’ve got to be a Baabae partner. Take
                       advantage of our unique hyperlocal model to service
                       customers and see your profits grow.
-                    </p>
+                    </div>
                     <a className="btn btn-google" href="#" title="Google Play">
                       Google Play
                     </a>
@@ -72,15 +72,15 @@ class HomePage extends Component {
               <Row className="justify-content-md-left">
                 <Col md={{ span: 6, offset: 1 }}>
                   <div className="main-content">
-                    <h4 className="main-heading">
+                    <div className="main-heading">
                       For Anything, Anywhere, Anytime
-                    </h4>
-                    <h1 className="sub-heading">Order Now</h1>
-                    <p className="sub-body">
+                    </div>
+                    <div className="sub-heading">Order Now</div>
+                    <div className="sub-body">
                       Want milk? Chocolates? Bread? Soap? Order it all on one
                       app and have it delivered wherever you are in record time!
                       Baabae- the one-stop-shop for all your grocery needs.
-                    </p>
+                    </div>
                     <a className="btn btn-google" href="#" title="Google Play">
                       Google Play
                     </a>
@@ -93,10 +93,13 @@ class HomePage extends Component {
 
         <section>
           <div className="about-us">
-            <Row className="justify-content-md-center">
+            <Row
+              className="justify-content-md-center"
+              style={{ margin: "auto" }}
+            >
               <Col md="6">
                 <div className="about-us-heading">About us</div>
-                <p className="body">
+                <div className="body">
                   BaaBae is on a mission – we want to help the next billion
                   producers and consumers grow together. So, we designed an
                   e-commerce platform where they could come together- where
@@ -106,27 +109,27 @@ class HomePage extends Component {
                   by introducing them to our expansive network and make shopping
                   convenient for customers by having the widest range of
                   inventory ever!
-                </p>
+                </div>
               </Col>
             </Row>
           </div>
 
           <div className="how-it-works">
-            <div className="left-circle"></div>
+            <div className="left-circle d-none d-lg-block"></div>
             <div className="right-circle"></div>
-            <div className="mobile-screen">
+            <div className="mobile-screen d-none d-lg-block">
               <img src="/baabae.png"></img>
             </div>
             <Carousel>
               <Carousel.Item>
                 <Row>
-                  <Col md={{ span: 7, offset: 4 }}>
+                  <Col md={{ span: 7, offset: 4 }} xs="12">
                     <div className="content">
                       <div className="heading">How it Works for Customers</div>
-                      <p className="sub-heading">
+                      <div className="sub-heading">
                         No matter what you need, stocking up your pantry with
                         BaaBae is convenient and simple as 1..2..3!
-                      </p>
+                      </div>
                       <div className="body">
                         <Row>
                           <Col md="6">
@@ -135,12 +138,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Download the app</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Download the app
+                                </div>
+                                <div className="body-content">
                                   Available on Google Play and the Apple App
                                   Store, the BaaBae app is compatible with all
                                   phones and it’s Free!
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -150,12 +155,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Login to your account</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Login to your account
+                                </div>
+                                <div className="body-content">
                                   Create a simple user name and password and
                                   create your account so we can serve you
                                   better.
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -165,12 +172,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Fill your cart</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Fill your cart
+                                </div>
+                                <div className="body-content">
                                   Add all the things you need to your cart,
                                   confirm the order with an online payment and
                                   tell us when and where to deliver it.
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -180,11 +189,11 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Ting Tong!</h4>
-                                <p>
+                                <div className="body-heading">Ting Tong!</div>
+                                <div className="body-content">
                                   Before you know it, our partner will be at
                                   your doorstep with everything you ordered!
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -196,13 +205,13 @@ class HomePage extends Component {
               </Carousel.Item>
               <Carousel.Item>
                 <Row>
-                  <Col md={{ span: 7, offset: 4 }}>
+                  <Col md={{ span: 7, offset: 4 }} xs="12">
                     <div className="content">
                       <div className="heading">How it Works for Sellers</div>
-                      <p className="sub-heading">
+                      <div className="sub-heading">
                         Want to expand your service to more customers – becoming
                         a seller with BaaBae is easy!
-                      </p>
+                      </div>
                       <div className="body">
                         <Row>
                           <Col md="6">
@@ -211,12 +220,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Visit the BaaBae website</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Visit the BaaBae website
+                                </div>
+                                <div className="body-content">
                                   A desktop, a laptop, or even your phone- use
                                   whatever’s most convenient to visit the BaaBae
                                   website.
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -226,11 +237,13 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Register as a seller</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Register as a seller
+                                </div>
+                                <div className="body-content">
                                   Enter your details on our seller form and get
                                   registered as a BaaBae seller.
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -240,12 +253,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Set up Your Mobile Shop</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Set up Your Mobile Shop
+                                </div>
+                                <div className="body-content">
                                   Put down a refundable security deposit and
                                   work with our experts to select inventory and
                                   set up your mobile shop.
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -255,12 +270,14 @@ class HomePage extends Component {
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
                               <Col md="10">
-                                <h4>Get Your First Order</h4>
-                                <p>
+                                <div className="body-heading">
+                                  Get Your First Order
+                                </div>
+                                <div className="body-content">
                                   Observe your BaaBae account- your first order
                                   could come anytime. And, from then on you’ll
                                   can track your number of orders!
-                                </p>
+                                </div>
                               </Col>
                             </Row>
                           </Col>
@@ -277,7 +294,10 @@ class HomePage extends Component {
           <div className="shop-by-category">
             <div className="title">Shop by Category</div>
             <div className="content">
-              <Row className="justify-content-md-center">
+              <Row
+                className="justify-content-md-center"
+                style={{ margin: "auto" }}
+              >
                 <Col md="3">
                   <div className="wrapper">
                     <div className="content-image">
@@ -415,7 +435,7 @@ class HomePage extends Component {
           </div>
         </section>
         <section className="register">
-          <div className="register-wrapper-outer">
+          <div className="register-wrapper-outer d-none d-lg-block">
             <Row className="justify-content-md-center">
               <Col md="9">
                 <div className="register-wrapper-inner">

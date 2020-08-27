@@ -12,3 +12,10 @@
     font-weight: bold;
     margin-left: 5rem;
 }
+
+@media screen and (max-width: 812px) and (min-width: 340px) {
+    .logo {
+
+        margin-left: 0rem;
+    }
+}

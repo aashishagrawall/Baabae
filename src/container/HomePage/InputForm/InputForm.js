@@ -240,7 +240,7 @@ const InputForm = () => {
                 </div>
               </Col>
             </Row>
-            <Button type="submit" style={{ background: "#fe534c" }}>
+            <Button type="submit" style={{ background: "#ed3237" }}>
               I am ready to become Baabae Seller
             </Button>
           </FormGroup>

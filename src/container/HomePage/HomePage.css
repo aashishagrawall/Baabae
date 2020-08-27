@@ -2,7 +2,6 @@
   height: calc(100vh - 60px);
   position: relative;
 }
-
 .main-section .overlay-div-circle {
   position: absolute;
   width: 100%;
@@ -11,7 +10,6 @@
   background: white;
   z-index: 1;
 }
-
 .main-section .mobile-screen {
   position: absolute;
   bottom: 15px;
@@ -20,37 +18,59 @@
   right: 5%;
   z-index: 1;
 }
-
 .main-section .mobile-screen img {
   width: 100%;
   height: 100%;
 }
-
 .main-section .main-carousel .carousel-control-prev,
 .main-section .main-carousel .carousel-control-next {
   width: 5%;
 }
-
 .main-section .main-carousel .landing-corousel-item {
   height: calc(100vh - 60px);
 }
-
 .main-section .main-carousel .landing-corousel-item .background-image {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-
 .main-section .main-carousel .landing-corousel-item .main-content {
   margin-top: 150px;
   color: white;
+}
+.main-section .main-carousel .landing-corousel-item .main-content .main-heading {
+  font-size: 25px;
+}
+.main-section .main-carousel .landing-corousel-item .main-content .sub-heading {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.main-section .main-carousel .landing-corousel-item .main-content .sub-body {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .main-section .main-carousel .landing-corousel-item .main-content .main-heading {
+    font-size: 18px;
+  }
+  .main-section .main-carousel .landing-corousel-item .main-content .sub-heading {
+    font-size: 25px;
+  }
+  .main-section .main-carousel .landing-corousel-item .main-content .sub-body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .main-section .main-carousel .landing-corousel-item .main-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .about-us {
   margin: 30px 0 60px 0;
   text-align: center;
 }
-
 .about-us .about-us-heading {
   color: black;
   font-weight: bold;
@@ -60,7 +80,7 @@
   font-size: 30px;
   font-family: oswald;
   text-decoration: none;
-  background-image: linear-gradient(to right, #F16A70, #F16A70);
+  background-image: linear-gradient(to right, #ed3237, #ed3237);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 50% 2px;
@@ -68,9 +88,16 @@
   transition: background-size 0.5s ease;
   background-color: white;
 }
-
 .about-us .about-us-heading:hover {
   background-size: 100% 2px;
+}
+.about-us .body {
+  font-size: 18px;
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .about-us .body {
+    font-size: 12px;
+  }
 }
 
 .how-it-works {
@@ -79,7 +106,6 @@
   text-align: left;
   height: 75vh;
 }
-
 .how-it-works .mobile-screen {
   position: absolute;
   z-index: 2;
@@ -87,35 +113,30 @@
   top: 7%;
   width: 35%;
 }
-
 .how-it-works .mobile-screen img {
   width: 100%;
   height: 100%;
 }
-
 .how-it-works .left-circle {
-  background: #fe534c;
+  background: #ed3237;
   width: 100%;
   height: 100%;
   position: absolute;
   clip-path: circle(40% at 0 100%);
   z-index: 1;
 }
-
 .how-it-works .right-circle {
-  background: #fe534c;
+  background: #ed3237;
   width: 100%;
   height: 100%;
   position: absolute;
   clip-path: circle(10% at 100% 0);
   z-index: 1;
 }
-
 .how-it-works .content {
   padding-top: 100px;
   padding-bottom: 80px;
 }
-
 .how-it-works .content .heading {
   color: black;
   font-weight: bold;
@@ -125,25 +146,43 @@
   font-size: 35px;
   font-family: oswald;
   text-decoration: none;
-  background-image: linear-gradient(to right, #fe534c, #fe534c);
+  background-image: linear-gradient(to right, #ed3237, #ed3237);
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 30% 2px;
   margin-bottom: 15px;
   transition: background-size 0.5s ease;
 }
-
 .how-it-works .content .heading:hover {
   background-size: 100% 2px;
 }
-
 .how-it-works .content .sub-heading {
+  font-size: 16px;
   margin-bottom: 35px;
 }
-
+.how-it-works .content .body .body-heading {
+  font-size: 25px;
+}
+.how-it-works .content .body .body-content {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 .how-it-works .content .tick-mark {
   width: 40px;
   margin-top: 5px;
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .how-it-works .content {
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+  .how-it-works .content .heading {
+    font-size: 25px;
+  }
+  .how-it-works .content .sub-heading {
+    font-size: 12px;
+    margin-bottom: 35px;
+  }
 }
 
 .category {
@@ -151,12 +190,10 @@
   -moz-box-shadow: 0px 4px 8px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 8px -3px rgba(0, 0, 0, 0.75);
 }
-
 .category .shop-by-category {
   text-align: center;
   padding: auto 10rem;
 }
-
 .category .shop-by-category .title {
   color: black;
   font-weight: bold;
@@ -167,7 +204,7 @@
   font-size: 30px;
   font-family: oswald;
   text-decoration: none;
-  background-image: linear-gradient(to right, #F16A70, #F16A70);
+  background-image: linear-gradient(to right, #ed3237, #ed3237);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 50% 2px;
@@ -175,27 +212,24 @@
   transition: background-size 0.5s ease;
   background-color: white;
 }
-
 .category .shop-by-category .title:hover {
   background-size: 100% 2px;
 }
-
 .category .shop-by-category .content .wrapper {
   margin-bottom: 3rem;
 }
-
 .category .shop-by-category .content .wrapper .content-image {
   width: 120px;
   height: 120px;
-  border: 4px solid #fe534c;
+  border: 4px solid #ed3237;
   margin: auto;
   margin-bottom: 15px;
+  border: 50%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .category .shop-by-category .content .wrapper .content-image img {
   width: 50px;
   height: 50px;
@@ -205,21 +239,17 @@
   text-align: center;
   padding: 4rem 8rem;
 }
-
 .blog .blog-wrapper .card {
   border: none;
 }
-
 .blog .blog-wrapper .card img {
   border-radius: 15px;
   height: 200px;
 }
-
 .blog .blog-wrapper .card .card-body {
   padding: 10px 0px;
   text-align: left;
 }
-
 .blog .blog-wrapper .card .card-body .date-comments {
   display: flex;
   align-items: flex-start;
@@ -227,11 +257,9 @@
   font-size: 12px;
   padding-bottom: 7px;
 }
-
 .blog .blog-wrapper .card .card-body .card-text {
   font-weight: bold;
 }
-
 .blog .blog-wrapper .title {
   color: black;
   font-weight: bold;
@@ -241,7 +269,7 @@
   font-size: 30px;
   font-family: oswald;
   text-decoration: none;
-  background-image: linear-gradient(to right, #F16A70, #F16A70);
+  background-image: linear-gradient(to right, #ed3237, #ed3237);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 50% 2px;
@@ -249,7 +277,6 @@
   transition: background-size 0.5s ease;
   background-color: white;
 }
-
 .blog .blog-wrapper .title:hover {
   background-size: 100% 2px;
 }
@@ -259,11 +286,9 @@
   -moz-box-shadow: 0px -4px 13px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px -4px 13px -4px rgba(0, 0, 0, 0.75);
 }
-
 .register .register-wrapper-outer {
   padding: 5rem;
 }
-
 .register .register-wrapper-outer .register-wrapper-inner {
   padding: 4rem 8rem;
   -webkit-box-shadow: 0px 1px 25px 1px rgba(117, 112, 117, 0.62);
@@ -271,16 +296,13 @@
   box-shadow: 0px 1px 25px 1px rgba(117, 112, 117, 0.62);
   border-radius: 20px;
 }
-
 .register .register-wrapper-outer .register-wrapper-inner .input-wrapper {
   margin-bottom: 1rem;
 }
-
 .register .register-wrapper-outer .register-wrapper-inner .input-wrapper label {
   font-size: 14px;
   font-weight: bold;
 }
-
 .register .register-wrapper-outer .register-wrapper-inner .register-title {
   margin-bottom: 3rem;
   font-weight: bold;
@@ -291,27 +313,22 @@
   position: relative;
   color: white;
 }
-
 .footer .circle {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #fe534c;
+  background: #ed3237;
   clip-path: ellipse(65% 80% at 50% 88%);
 }
-
 .footer .footer-wrapper {
   padding: 5rem 8rem 4rem 8rem;
 }
-
 .footer .subscribe-input {
   margin-top: 10px;
 }
-
 .footer .upper-section {
   margin-bottom: 3rem;
 }
-
 .footer .title {
   font-weight: bold;
   padding-bottom: 5px;
@@ -320,14 +337,13 @@
   font-size: 30px;
   font-family: oswald;
   text-decoration: none;
-  background-image: linear-gradient(to right, #F16A70, #F16A70);
+  background-image: linear-gradient(to right, #ed3237, #ed3237);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 50% 2px;
   margin-bottom: 2rem;
   transition: background-size 0.5s ease;
 }
-
 .footer .title:hover {
   background-size: 100% 2px;
 }
@@ -338,7 +354,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 a.btn-google {
   color: black;
 }
