@@ -152,7 +152,8 @@
 
     position: relative;
     text-align: left;
-    height: 75vh;
+    min-height: 75vh;
+
 
     .mobile-screen {
         position: absolute;

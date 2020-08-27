@@ -132,12 +132,12 @@ class HomePage extends Component {
                       </div>
                       <div className="body">
                         <Row>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Download the app
                                 </div>
@@ -149,12 +149,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Login to your account
                                 </div>
@@ -166,12 +166,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Fill your cart
                                 </div>
@@ -183,12 +183,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">Ting Tong!</div>
                                 <div className="body-content">
                                   Before you know it, our partner will be at
@@ -214,12 +214,12 @@ class HomePage extends Component {
                       </div>
                       <div className="body">
                         <Row>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Visit the BaaBae website
                                 </div>
@@ -231,12 +231,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Register as a seller
                                 </div>
@@ -247,12 +247,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Set up Your Mobile Shop
                                 </div>
@@ -264,12 +264,12 @@ class HomePage extends Component {
                               </Col>
                             </Row>
                           </Col>
-                          <Col md="6">
+                          <Col md="6" xs="6">
                             <Row>
-                              <Col md="2">
+                              <Col md="2" xs="3">
                                 <img src="/correct.svg" className="tick-mark" />
                               </Col>
-                              <Col md="10">
+                              <Col md="10" xs="9">
                                 <div className="body-heading">
                                   Get Your First Order
                                 </div>
@@ -298,7 +298,7 @@ class HomePage extends Component {
                 className="justify-content-md-center"
                 style={{ margin: "auto" }}
               >
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/HealthAndHygeine.png" />
@@ -308,7 +308,7 @@ class HomePage extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/BeautyAndPersonalCare.png" />
@@ -318,7 +318,7 @@ class HomePage extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/snacks.png" />
@@ -328,7 +328,7 @@ class HomePage extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/instant-noodles.png" />
@@ -336,7 +336,7 @@ class HomePage extends Component {
                     <div className="content-description">Instant Foods</div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/milk.png" />
@@ -344,7 +344,7 @@ class HomePage extends Component {
                     <div className="content-description">Dairy Products</div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/drink.png" />
@@ -354,7 +354,7 @@ class HomePage extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md="3">
+                <Col md="3" xs="6">
                   <div className="wrapper">
                     <div className="content-image">
                       <img src="/categories/hookah.png" />
@@ -373,7 +373,7 @@ class HomePage extends Component {
             <Carousel>
               <Carousel.Item>
                 <Row>
-                  <Col md="3">
+                  <Col md="3" xs="6">
                     <Card>
                       <Card.Img variant="top" src="/test.jpg" />
                       <Card.Body>
@@ -387,7 +387,7 @@ class HomePage extends Component {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col md="3" xs="6">
                     <Card>
                       <Card.Img variant="top" src="/test.jpg" />
                       <Card.Body>
@@ -401,7 +401,7 @@ class HomePage extends Component {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col md="3" xs="6">
                     <Card>
                       <Card.Img variant="top" src="/test.jpg" />
                       <Card.Body>
@@ -415,7 +415,7 @@ class HomePage extends Component {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col md="3" xs="6">
                     <Card>
                       <Card.Img variant="top" src="/test.jpg" />
                       <Card.Body>
