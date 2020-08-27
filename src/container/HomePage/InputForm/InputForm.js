@@ -44,8 +44,8 @@ const InputForm = () => {
       render={({ errors, status, touched }) => (
         <Form>
           <FormGroup>
-            <Row className="justify-content-md-left">
-              <Col md="6">
+            <Row className="justify-content-left">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>First Name</label>
                   <Field
@@ -66,7 +66,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>Last Name</label>
                   <Field
@@ -85,7 +85,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>Email Address</label>
                   <Field
@@ -105,7 +105,7 @@ const InputForm = () => {
                 </div>
               </Col>
 
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>State</label>
                   <Field as="select" name="state">
@@ -146,7 +146,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>City</label>
                   <Field
@@ -165,7 +165,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>Phone Number</label>
                   <Field
@@ -186,7 +186,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>Adhaar Number</label>
                   <Field
@@ -207,7 +207,7 @@ const InputForm = () => {
                   />
                 </div>
               </Col>
-              <Col md="6">
+              <Col md="6" xs="6">
                 <div className="input-wrapper">
                   <label>Address</label>
                   <Field
@@ -240,7 +240,10 @@ const InputForm = () => {
                 </div>
               </Col>
             </Row>
-            <Button type="submit" style={{ background: "#ed3237" }}>
+            <Button
+              type="submit"
+              style={{ background: "#ed3237", width: "100%" }}
+            >
               I am ready to become Baabae Seller
             </Button>
           </FormGroup>

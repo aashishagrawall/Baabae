@@ -295,7 +295,7 @@ class HomePage extends Component {
             <div className="title">Shop by Category</div>
             <div className="content">
               <Row
-                className="justify-content-md-center"
+                className="justify-content-center"
                 style={{ margin: "auto" }}
               >
                 <Col md="3" xs="6">
@@ -435,9 +435,9 @@ class HomePage extends Component {
           </div>
         </section>
         <section className="register">
-          <div className="register-wrapper-outer d-none d-lg-block">
+          <div className="register-wrapper-outer">
             <Row className="justify-content-md-center">
-              <Col md="9">
+              <Col md="9" xs="12">
                 <div className="register-wrapper-inner">
                   <h3 className="register-title"> Register with us</h3>
                   <InputForm></InputForm>
@@ -449,8 +449,8 @@ class HomePage extends Component {
         <section className="footer">
           <div className="circle"></div>
           <div className="footer-wrapper">
-            <Row className="justify-content-md-center">
-              <Col md="8">
+            <Row className="justify-content-center">
+              <Col md="8" xs="12">
                 <div className="upper-section">
                   <div className="title">Subscribe to our Newslater</div>
                   <p className="sub-heading">
@@ -459,41 +459,42 @@ class HomePage extends Component {
                     connected!
                   </p>
                   <Row>
-                    <Col md="8">
+                    <Col md="8" xs="8">
                       <FormControl
                         placeholder="Enter your mail "
                         type="text"
                         className="subscribe-input"
                       />
                     </Col>
-                    <Col md="4">
-                      <Button variant="primary">Subscribe</Button>
+                    <Col md="4" xs="4">
+                      <Button variant="primary" style={{ width: "100%" }}>
+                        Subscribe
+                      </Button>
                     </Col>
                   </Row>
                 </div>
               </Col>
 
-              <Col md="10">
+              <Col md="10" xs="12">
                 <Row className="lower-footer">
-                  <Col md="4">
+                  <Col md="4" xs="4">
                     <h3>Location</h3>
                     <div className="content">
                       Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      typesetting
                     </div>
                   </Col>
-                  <Col md="4">
+                  <Col md="4" xs="4">
                     <h3>Contact Info</h3>
                     <div className="content">
                       <div className="call">Call : 12312312313</div>
                       <div className="email">Email : contact@baabae.in</div>
                     </div>
                   </Col>
-                  <Col md="4">
+                  <Col md="4" xs="4">
                     <h3>Find us on</h3>
                     <div className="content">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Lorem Ipsum is simply dummy text of the printing and typ
                     </div>
                   </Col>
                 </Row>

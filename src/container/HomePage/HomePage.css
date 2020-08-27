@@ -280,6 +280,11 @@
 .blog .blog-wrapper .title:hover {
   background-size: 100% 2px;
 }
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .blog .blog-wrapper {
+    padding: 3rem 2rem;
+  }
+}
 
 .register {
   -webkit-box-shadow: 0px -4px 13px -4px rgba(0, 0, 0, 0.75);
@@ -306,6 +311,18 @@
 .register .register-wrapper-outer .register-wrapper-inner .register-title {
   margin-bottom: 3rem;
   font-weight: bold;
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .register .register-wrapper-outer {
+    padding: 2rem 1.5rem;
+  }
+  .register .register-wrapper-outer .register-wrapper-inner {
+    padding: 1.5rem;
+  }
+  .register .register-wrapper-outer .register-wrapper-inner .register-title {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 .footer {
@@ -346,6 +363,14 @@
 }
 .footer .title:hover {
   background-size: 100% 2px;
+}
+@media screen and (max-width: 812px) and (min-width: 340px) {
+  .footer .circle {
+    clip-path: ellipse(114% 80% at 50% 88%);
+  }
+  .footer .footer-wrapper {
+    padding: 4rem 2rem 4rem 2rem;
+  }
 }
 
 @font-face {

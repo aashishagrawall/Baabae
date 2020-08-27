@@ -399,6 +399,13 @@
 
         }
     }
+
+    @media screen and (max-width: 812px) and (min-width: 340px) {
+        .blog-wrapper {
+            padding: 3rem 2rem;
+
+        }
+    }
 }
 
 .register {
@@ -432,6 +439,23 @@
                 font-weight: bold;
             }
         }
+    }
+
+    @media screen and (max-width: 812px) and (min-width: 340px) {
+        .register-wrapper-outer {
+            padding: 2rem 1.5rem;
+
+            .register-wrapper-inner {
+                padding: 1.5rem;
+
+                .register-title {
+                    margin-bottom: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
     }
 }
 
@@ -491,8 +515,19 @@
 
 
     }
-}
 
+    @media screen and (max-width: 812px) and (min-width: 340px) {
+        .circle {
+
+            clip-path: ellipse(114% 80% at 50% 88%);
+        }
+
+        .footer-wrapper {
+            padding: 4rem 2rem 4rem 2rem;
+
+        }
+    }
+}
 
 
 @font-face {
