@@ -123,14 +123,15 @@ class HomePage extends Component {
             <Carousel>
               <Carousel.Item>
                 <Row>
-                  <Col md={{ span: 5, offset: 4 }} xs="12">
-                    <div className="content">
+                  <div className="content">
+                    <Col md={{ span: 5, offset: 4 }} xs="12">
                       <div className="heading">How it Works for Customers</div>
                       <div className="sub-heading">
                         No matter what you need, stocking up your pantry with
                         BaaBae is convenient and simple as 1..2..3!
                       </div>
-
+                    </Col>
+                    <Col md={{ span: 7, offset: 4 }} xs="12">
                       <div className="body">
                         <Row>
                           <Col md="6" xs="6">
@@ -200,19 +201,21 @@ class HomePage extends Component {
                           </Col>
                         </Row>
                       </div>
-                    </div>
-                  </Col>
+                    </Col>
+                  </div>
                 </Row>
               </Carousel.Item>
               <Carousel.Item>
                 <Row>
-                  <Col md={{ span: 7, offset: 4 }} xs="12">
-                    <div className="content">
+                  <div className="content">
+                    <Col md={{ span: 5, offset: 4 }} xs="12">
                       <div className="heading">How it Works for Sellers</div>
                       <div className="sub-heading">
                         Want to expand your service to more customers – becoming
                         a seller with BaaBae is easy!
                       </div>
+                    </Col>
+                    <Col md={{ span: 7, offset: 4 }} xs="12">
                       <div className="body">
                         <Row>
                           <Col md="6" xs="6">
@@ -284,8 +287,8 @@ class HomePage extends Component {
                           </Col>
                         </Row>
                       </div>
-                    </div>
-                  </Col>
+                    </Col>
+                  </div>
                 </Row>
               </Carousel.Item>
             </Carousel>
