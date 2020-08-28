@@ -123,13 +123,14 @@ class HomePage extends Component {
             <Carousel>
               <Carousel.Item>
                 <Row>
-                  <Col md={{ span: 7, offset: 4 }} xs="12">
+                  <Col md={{ span: 5, offset: 4 }} xs="12">
                     <div className="content">
                       <div className="heading">How it Works for Customers</div>
                       <div className="sub-heading">
                         No matter what you need, stocking up your pantry with
                         BaaBae is convenient and simple as 1..2..3!
                       </div>
+
                       <div className="body">
                         <Row>
                           <Col md="6" xs="6">
