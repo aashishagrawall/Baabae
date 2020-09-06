@@ -3,6 +3,11 @@
 
 }
 
+@font-face {
+  font-family: 'MetropolisMedium';
+  src: url('/Metropolis-Medium.otf');
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'MetropolisMedium'
 }

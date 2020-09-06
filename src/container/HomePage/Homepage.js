@@ -38,7 +38,12 @@ class HomePage extends Component {
                       packet of instant noodles or even a bottle of shampoo, get
                       everything you need right here.
                     </div>
-                    <a className="btn btn-google" href="#" title="Google Play">
+                    <a
+                      className="btn btn-google"
+                      href="https://play.google.com/store/apps/details?id=com.customer.baabae&hl=en"
+                      target="_blank"
+                      title="Google Play"
+                    >
                       Google Play
                     </a>
                   </div>
@@ -60,7 +65,12 @@ class HomePage extends Component {
                       advantage of our unique hyperlocal model to service
                       customers and see your profits grow.
                     </div>
-                    <a className="btn btn-google" href="#" title="Google Play">
+                    <a
+                      className="btn btn-google"
+                      href="https://play.google.com/store/apps/details?id=com.customer.baabae&hl=en"
+                      target="_blank"
+                      title="Google Play"
+                    >
                       Google Play
                     </a>
                   </div>
@@ -81,7 +91,12 @@ class HomePage extends Component {
                       app and have it delivered wherever you are in record time!
                       Baabae- the one-stop-shop for all your grocery needs.
                     </div>
-                    <a className="btn btn-google" href="#" title="Google Play">
+                    <a
+                      className="btn btn-google"
+                      href="https://play.google.com/store/apps/details?id=com.customer.baabae&hl=en"
+                      target="_blank"
+                      title="Google Play"
+                    >
                       Google Play
                     </a>
                   </div>
@@ -483,16 +498,13 @@ class HomePage extends Component {
                 <Row className="lower-footer">
                   <Col md="4" xs="4">
                     <h3>Location</h3>
-                    <div className="content">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting
-                    </div>
+                    <div className="content">Serving in New Delhi</div>
                   </Col>
                   <Col md="4" xs="4">
                     <h3>Contact Info</h3>
                     <div className="content">
-                      <div className="call">Call : 12312312313</div>
-                      <div className="email">Email : contact@baabae.in</div>
+                      <div className="call">Call :+91-8595722569 </div>
+                      <div className="email">Email : team@baabae.in</div>
                     </div>
                   </Col>
                   <Col md="4" xs="4">

@@ -13,7 +13,7 @@ class Layout extends Component {
         <Navbar bg="white" expand="lg">
           <Navbar.Brand>
             <i className="logo">
-              baa<u>bae</u>
+              <img src="/BaabaeLogo.png" style={{ width: "100px" }}></img>
             </i>
           </Navbar.Brand>
         </Navbar>

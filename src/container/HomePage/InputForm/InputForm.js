@@ -10,6 +10,8 @@ const schema = Yup.object().shape({
   gender: Yup.string().required("Please select gender"),
   city: Yup.string().required("City is required"),
   state: Yup.string().required("State is required"),
+  agreement: Yup.bool().required("Accept Terms & Conditions is required'"),
+  newsletter: Yup.bool().required("Newsletter is required'"),
   phoneNumber: Yup.string()
     .matches(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/, {
       message: "Invalid Phone Number",
@@ -36,6 +38,8 @@ const InputForm = () => {
         phoneNumber: "",
         adhaarNumber: "",
         address: "",
+        agreement: true,
+        newsletter: true,
       }}
       validationSchema={schema}
       onSubmit={(fields) => {
@@ -108,7 +112,8 @@ const InputForm = () => {
 
               <Col md="6" xs="6">
                 <div className="input-wrapper">
-                  <label>State</label>
+                  <div>State</div>
+
                   <Field as="select" name="state">
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -230,13 +235,13 @@ const InputForm = () => {
               <Col md="12">
                 <div role="group" aria-labelledby="checkbox-group">
                   <label>
-                    <Field type="checkbox" name="agreement" value="true" />
-                    Do you accept our term and conditions?
+                    <Field type="checkbox" name="agreement" />
+                    &nbsp; Do you accept our term and conditions?
                   </label>
                   <label>
-                    <Field type="checkbox" name="newsletter" value="true" />
-                    Do you want to receive newsletters and regular notifications
-                    on your email and phone number?
+                    <Field type="checkbox" name="newsletter" />
+                    &nbsp; Do you want to receive newsletters and regular
+                    notifications on your email and phone number?
                   </label>
                 </div>
               </Col>
