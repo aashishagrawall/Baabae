@@ -47,7 +47,8 @@
             .main-content {
                 margin-top: 150px;
 
-                color: white;
+                color: #19133c;
+                ;
 
                 .main-heading {
                     font-size: 25px;
@@ -141,6 +142,7 @@
 
         @media screen and (max-width: 812px) and (min-width: 340px) {
             font-size: 12px;
+            text-align: justify;
         }
     }
 
@@ -243,6 +245,9 @@
     }
 
     @media screen and (max-width: 812px) and (min-width: 340px) {
+
+        padding: 0 20px;
+
         .content {
             padding-top: 45px;
             padding-bottom: 40px;

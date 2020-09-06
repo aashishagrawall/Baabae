@@ -1,13 +1,5 @@
 import React, { Component, Fragment } from "react";
-import {
-  Carousel,
-  Card,
-  Col,
-  Row,
-  Button,
-  Form,
-  FormControl,
-} from "react-bootstrap";
+import { Carousel, Card, Col, Row, Button, FormControl } from "react-bootstrap";
 import "./HomePage.css";
 
 import InputForm from "./InputForm/InputForm";
@@ -17,9 +9,12 @@ class HomePage extends Component {
     return (
       <Fragment>
         <section className="main-section">
-          <div className="overlay-div-circle d-none d-lg-block"></div>
+          <div
+            className="overlay-div-circle d-none d-lg-block"
+            style={{ display: "none" }}
+          ></div>
           <div className="mobile-screen  d-none d-lg-block">
-            <img src="/mobileWithLogo.png"></img>
+            <img src="/mobileWithLogo.png" style={{ display: "none" }}></img>
           </div>
 
           <Carousel className="main-carousel">
@@ -29,7 +24,7 @@ class HomePage extends Component {
                 <Col xs="12" md={{ span: 5, offset: 1 }}>
                   <div className="main-content">
                     <div className="main-heading">
-                      For the Quickest Doorstep Delivery,
+                      For the Quickest D oorstep Delivery,
                     </div>
                     <div className="sub-heading">Order Now</div>
                     <div className="sub-body">
@@ -140,10 +135,10 @@ class HomePage extends Component {
                 <Row>
                   <div className="content">
                     <Col md={{ span: 5, offset: 4 }} xs="12">
-                      <div className="heading">How it Works for Customers</div>
+                      <div className="heading">How it works for customers</div>
                       <div className="sub-heading">
                         No matter what you need, stocking up your pantry with
-                        BaaBae is convenient and simple as 1..2..3!
+                        Baabae is convenient and simple as 1..2..3!
                       </div>
                     </Col>
                     <Col md={{ span: 7, offset: 4 }} xs="12">
@@ -224,10 +219,10 @@ class HomePage extends Component {
                 <Row>
                   <div className="content">
                     <Col md={{ span: 5, offset: 4 }} xs="12">
-                      <div className="heading">How it Works for Sellers</div>
+                      <div className="heading">How it Works for sellers</div>
                       <div className="sub-heading">
                         Want to expand your service to more customers – becoming
-                        a seller with BaaBae is easy!
+                        a seller with Baabae is easy!
                       </div>
                     </Col>
                     <Col md={{ span: 7, offset: 4 }} xs="12">
@@ -473,7 +468,7 @@ class HomePage extends Component {
                 <div className="upper-section">
                   <div className="title">Subscribe to our Newslater</div>
                   <p className="sub-heading">
-                    Do you want tips on grocery shopping? Want to know BaaBae’s
+                    Do you want tips on grocery shopping? Want to know Baabae’s
                     latest offers? Then subscribe to our newsletters and stay
                     connected!
                   </p>

@@ -36,7 +36,7 @@
 }
 .main-section .main-carousel .landing-corousel-item .main-content {
   margin-top: 150px;
-  color: white;
+  color: #19133c;
 }
 .main-section .main-carousel .landing-corousel-item .main-content .main-heading {
   font-size: 25px;
@@ -97,6 +97,7 @@
 @media screen and (max-width: 812px) and (min-width: 340px) {
   .about-us .body {
     font-size: 12px;
+    text-align: justify;
   }
 }
 
@@ -172,6 +173,9 @@
   margin-top: 5px;
 }
 @media screen and (max-width: 812px) and (min-width: 340px) {
+  .how-it-works {
+    padding: 0 20px;
+  }
   .how-it-works .content {
     padding-top: 45px;
     padding-bottom: 40px;

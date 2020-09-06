@@ -114,7 +114,7 @@ const InputForm = () => {
                 <div className="input-wrapper">
                   <div>State</div>
 
-                  <Field as="select" name="state">
+                  <Field as="select" name="state" style={{width:'100%'}}>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                     <option value="Assam">Assam</option>
@@ -248,7 +248,7 @@ const InputForm = () => {
             </Row>
             <Button
               type="submit"
-              style={{ background: "#ed3237", width: "100%" }}
+              style={{ background: "#ed3237", width: "100%".fontsize:'12px' }}
             >
               I am ready to become Baabae Seller
             </Button>
