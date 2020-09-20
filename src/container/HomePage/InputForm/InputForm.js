@@ -1,13 +1,13 @@
 import React from "react";
 import { Formik, ErrorMessage, Field, Form } from "formik";
 import { Col, Row, Button, label, FormGroup } from "react-bootstrap";
+import axios from 'axios'
 import * as Yup from "yup";
 
 const schema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
   lastName: Yup.string().required("Last name is required"),
   email: Yup.string().email("Email is invalid").required("Email is required"),
-  gender: Yup.string().required("Please select gender"),
   city: Yup.string().required("City is required"),
   state: Yup.string().required("State is required"),
   agreement: Yup.bool().required("Accept Terms & Conditions is required'"),
@@ -42,11 +42,23 @@ const InputForm = () => {
         newsletter: true,
       }}
       validationSchema={schema}
-      onSubmit={(fields) => {
-        alert("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
+      onSubmit={(fields, { setSubmitting }) => {
+
+        // axios.put(`https://sheets.googleapis.com/v4/spreadsheets/1tMiNp9UZLKgU4mHt5TGvccjZ3Q6SRtJeEs4IO1rCboI/values/Sheet1!A1:D5?valueInputOption=USER_ENTERED`,{
+        //   "range": "Sheet1!A1:D5",
+        //   "majorDimension": "ROWS",
+        //   "values": [
+        //     ["Item", "Cost", "Stocked", "Ship Date"],
+        //     ["Wheel", "$20.50", "4", "3/1/2016"],
+        //     ["Door", "$15", "2", "3/15/2016"],
+        //     ["Engine", "$100", "1", "3/20/2016"],
+        //     ["Totals", "=SUM(B2:B4)", "=SUM(C2:C4)", "=MAX(D2:D4)"]
+        //   ],
+        // })
+      
       }}
-      render={({ errors, status, touched }) => (
-        <Form>
+      render={({ errors, status, touched,handleSubmit,isSubmitting }) => (
+        <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Row className="justify-content-left">
               <Col md="6" xs="6">
@@ -246,13 +258,15 @@ const InputForm = () => {
                 </div>
               </Col>
             </Row>
-            <Button
+            
+          </FormGroup>
+          <Button
               type="submit"
               style={{ background: "#ed3237", width: "100%", fontsize: "13px" }}
+              disabled={isSubmitting}
             >
               Register as Baabae Seller
             </Button>
-          </FormGroup>
         </Form>
       )}
     />
